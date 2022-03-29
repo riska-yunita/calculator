@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator Ilmiah</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="display">
+            <input id="screen" type="text" placeholder="0">
+        </div>
+        <div class="btns">
+            <div class="row">
+                <button id="ce" onclick="backspace()">Del</button>
+                <button onclick="pi()">π</button>
+                <button class="btn" value="(" onclick="insert('(')">(</button>
+                <button class="btn" value="(" onclick="insert(')')">)</button>
+                <button onclick="fact()">x!</button>
+                <button id="ac" onclick="restart()">AC</button>
+            </div>
+            <div class="row">
+                <button onclick="sin()">sin</button>
+                <button onclick="cos()">cos</button>
+                <button onclick="tan()">tan</button>
+                <button onclick="log()">log</button>
+                <button onclick="e()">e</button>
+                <a href="suhu.html"> <button>Suhu</button></a>
+            </div>
+            <div class="row">
+                
+            </div>
+            </div>
+            <div class="row">
+                <button class="btn" value="7" onclick="insert(7)">7</button>
+                <button class="btn" value="8" onclick="insert(8)">8</button>
+                <button class="btn" value="9" onclick="insert(9)">9</button>
+                <button onclick="pow()">x <span style="position: relative; bottom: .6em; right: .3em; font-size: 10px">2</span></button>
+                <button onclick="sqrt()">√</button>
+                <a href="suhu.html"> <button>Berat</button></a>
+            <div class="row">
+                <button class="btn" value="4" onclick="insert(4)">4</button>
+                <button class="btn" value="5" onclick="insert(5)">5</button>
+                <button class="btn" value="6" onclick="insert(6)">6</button>
+                <button class="btn" value="*" onclick="insert('*')">x</button>
+                <button class="btn" value="/" onclick="insert('/')">÷</button>
+            </div>
+            <div class="row">
+                <button class="btn" value="1" onclick="insert(1)">1</button>
+                <button class="btn" value="2" onclick="insert(2)">2</button>
+                <button class="btn" value="3" onclick="insert(3)">3</button>
+                <button class="btn" value="+" onclick="insert('+')">+</button>
+                <button class="btn" value="-" onclick="insert('-')">-</button>
+            </div>
+            <div class="row">
+                <button class="btn" onclick="insert(0)">0</button>
+                <button class="btn" onclick="insert('000')">000</button>
+                <button class="btn" onclick="insert('.')">.</button>
+                <button class="btn" value="%" onclick="percen()">%</button>
+                <button id="eval" value="=" onclick="equal()">=</button>
+            </div>
+        	<!-- <div class="row">
+        		<button id="ce" onclick="backspace()">Del</button>
+        		<button type="button" onclick="fact()">x!</button>
+        		<button class="btn" type="button" value="(" onclick="insert('(')">(</button>
+        		<button class="btn" type="button" value="(" onclick="insert(')')">)</button>
+        		<button class="btn" type="button" value="%" onclick="percen()">%</button>
+        		<button id="ac" onclick="restart()">AC</button>
+        	</div>
+        	<div class="row">
+        		<button type="button" onclick="sin()">sin</button>
+        		<button type="button" onclick="pi()">π</button>
+        		<button class="btn" type="button" value="7" onclick="insert(7)">7</button>
+        		<button class="btn" type="button" value="8" onclick="insert(8)">8</button>
+        		<button class="btn" type="button" value="9" onclick="insert(9)">9</button>
+        		<button class="btn" type="button" value="/" onclick="insert('/')">÷</button>
+        	</div>
+        	<div class="row">
+        		<button type="button" onclick="cos()">cos</button>
+        		<button type="button" onclick="log()">log</button>
+        		<button class="btn" type="button" value="4" onclick="insert(4)">4</button>
+        		<button class="btn" type="button" value="5" onclick="insert(5)">5</button>
+        		<button class="btn" type="button" value="6" onclick="insert(6)">6</button>
+        		<button class="btn" type="button" value="*" onclick="insert('*')">x</button>
+        	</div>
+        	<div class="row">
+        		<button type="button" onclick="tan()">tan</button>
+        		<button type="button" onclick="sqrt()">√</button>
+        		<button class="btn" type="button" value="1" onclick="insert(1)">1</button>
+        		<button class="btn" type="button" value="2" onclick="insert(2)">2</button>
+        		<button class="btn" type="button" value="3" onclick="insert(3)">3</button>
+        		<button class="btn" type="button" value="-" onclick="insert('-')">-</button>
+        	</div>
+        	<div class="row">
+        		<button type="button" onclick="e()">e</button>
+        		<button type="button" onclick="pow()">x <span style="position: relative; bottom: .4em; right: .1em;">y</span></button>
+        		<button class="btn" type="button" value="0" onclick="insert(0)">0</button>
+        		<button class="btn" type="button" value="0" onclick="insert('.')">.</button>
+        		<button id="eval" type="button" value="=" onclick="equal()">=</button>
+        		<button class="btn" type="button" value="+" onclick="insert('+')">+</button>
+        	</div> -->
+        </div>
+	</div>
+</body>
+<script type="text/javascript">
+    var screen = document.querySelector('#screen');
+</script>
+</html>
