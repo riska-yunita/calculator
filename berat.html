@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kalkulator Berat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cols" name="col">
+            <ul class="flex-list">
+                <li>
+                    <span>Stones</span><br>
+                    <input type="number" name="stone" id="stone" class="input">
+                </li>
+                <li>
+                    <span>Pounds</span><br>
+                    <input type="number" name="pon" id="pon" class="input">
+                </li>
+                <li>
+                    <span>Ounces</span><br>
+                    <input type="number" name="ons" id="ons" class="input">
+                </li>
+                <li>
+                    <span>Kilograms</span><br>
+                    <input type="number" name="kg" id="kg" class="input">
+                </li>
+                <li>
+                    <span>Grams</span><br>
+                    <input type="number" name="ton" id="ton" class="input">
+                </li>
+            </ul>
+            <div class="row">
+                <a href="index.html"> <button>Back</button></a>
+            </div>
+        </div>
+    </div>
+        
+   
+</body>
+
+<script type="text/javascript">
+    const inputs = document.getElementsByClassName("input");
+
+    for(let i=0; i<inputs.length; i++) {
+        let input = inputs[i];
+
+        input.addEventListener("input", function(e) {
+            let value = parseFloat(e.target.value);
+            switch(e.target.name) {
+                case "pon":
+                    kg.value = value/2.2046;
+                    ons.value = value * 16;
+                    stone.value= value*0.071429;
+                    gram.value= value/0.0022046;
+                    break;
+                case "kg":
+                    pon.value = value*2.2046 ;
+                    ons.value = value*35.274; ;
+                    stone.value= value*0.1574;
+                    gram.value= value*1000;
+                    break;
+                case "ons":
+                    pon.value = value*0.0625; 
+                    kg.value = value/35.274;
+                    stone.value= value*0.0044643;
+                    gram.value= value/0.035274;
+                    break;
+                case "stone":
+                    pon.value = value*14;
+                    kg.value = value/0.15747;
+                    ons.value = value*224;
+                    gram.value= value/0.00015747;
+                    break;
+                case "gram":
+                    pon.value =value*0.0022046;
+                    kg.value = value/1000;
+                    ons.value = value*0.035274;
+                    stone.value= value*0.00015747;
+            }
+        });
+    }
+</script>
+</html>
