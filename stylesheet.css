@@ -39,7 +39,7 @@ ul li{
 
 input{
     margin-bottom: 10px;
-    width: 270px;
+    width: 290px;
     height: 40px;
     text-align: right;
     outline: none;
@@ -71,7 +71,7 @@ input{
 
 .display #screen {
     margin-bottom: .5em;
-    width: 280px;
+    width: 290px;
     height: 70px;
     font-size: 35px;
     outline: none;
